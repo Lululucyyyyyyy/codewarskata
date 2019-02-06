@@ -1,0 +1,18 @@
+from functools import reduce
+def anagram_counter(words):
+    if len(words) == 0:
+        return 0
+    new_list = []
+    for word in words:
+        word =  ''.join(sorted(word))
+        new_list.append(word)
+    temp_list = new_list
+    count = 0
+    while len(temp_list) != 0:
+        word = new_list[0]
+        temp_list.remove(word)
+        for word2 in temp_list:
+            if word == word2:
+                count += 1        
+    #answer = (new_list.count(word) for word in new_list)
+    return count

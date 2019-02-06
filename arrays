@@ -1,0 +1,15 @@
+def comp(array1, array2):
+    # your code
+    if type(array1) != list or type(array2) != list:
+        return False
+    a1 = [int(x) for x in array1]
+    a2 = [int(x) for x in array2]
+    for num in array1:
+        if num**2 in a2:
+            a1.remove(num)
+            a2.remove(num**2)
+    if len(a1) == 0:
+        return True
+    else:
+        return False
+	

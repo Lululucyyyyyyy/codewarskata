@@ -1,0 +1,4 @@
+def max_number(n):
+    #your code here
+    answer = "".join(sorted(str(n), reverse = True))
+    return int(answer)
