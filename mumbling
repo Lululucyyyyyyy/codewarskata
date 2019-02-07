@@ -1,0 +1,11 @@
+def accum(str):
+    list_letters = []
+    temp_str = ""
+    for i in str:
+        list_letters.append(i.lower())
+    for i in range(len(list_letters)):
+        temp_str += list_letters[i].upper()
+        for j in range(i):
+            temp_str += list_letters[i]
+        temp_str += "-"
+    return temp_str[:-1]
