@@ -1,0 +1,18 @@
+def find_the_key(message, code):
+    # your code here
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    message_thing = ""
+    message_list = []
+    my_num = " "
+    for letter in message:
+        message_list.append(letter)
+    for i in range(len(message)):
+        temp = message_list[i]
+        index = alphabet.find(temp) + 1
+        num = code[i] - index
+        if my_num[0] == num:
+            break
+        else:
+            my_num += str(num)
+    print(my_num)
+    
