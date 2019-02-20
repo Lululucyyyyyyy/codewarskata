@@ -1,0 +1,13 @@
+import collections
+def food():
+    inputs = input().split('/n')
+    inputs.pop[0]
+    num = len(inputs)
+    times = collections.Counter(inputs)
+    anwer = ''
+    keys = [k for (k, v) in times.iteritems() if v == 0]
+    for i in range(num):
+        answer += str(keys[i])
+        answer += ' '
+        answer += '\n'
+    return answer
